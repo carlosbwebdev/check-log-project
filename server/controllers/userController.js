@@ -36,8 +36,10 @@ exports.findUser = async (req, res) => {
 
     res.json({
       status: 'success',
+      id: user.id,
       username: user.username,
       user: true,
+      admin: user.admin,
       token,
     });
   } else {
@@ -45,5 +47,25 @@ exports.findUser = async (req, res) => {
       status: 'fail - user not found',
       user: false,
     });
+  }
+};
+
+exports.findUserById = async (req, res) => {
+  const user = await User.findById(req.params.id);
+
+  if (user && user.id.length === 24) {
+    res.send(user);
+  } else {
+    res.status(500).send({ message: 'Invalid id' });
+  }
+};
+
+exports.getAllUsers = async (req, res) => {
+  const users = await User.find();
+
+  if (users) {
+    res.send(users);
+  } else {
+    res.status(500).send({ message: 'No users found' });
   }
 };
