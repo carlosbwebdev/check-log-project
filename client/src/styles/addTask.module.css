@@ -1,5 +1,5 @@
 .AddTaskPage {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   padding-top: 5rem;
   display: grid;
@@ -7,6 +7,8 @@
   grid-template-rows: 1fr;
   justify-content: flex-start;
   align-items: flex-start;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .AddTaskPage form {
