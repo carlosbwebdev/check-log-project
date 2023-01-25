@@ -54,9 +54,14 @@ exports.getTaskById = async (req, res) => {
         message: 'Task retrieved successfully',
         task,
       });
+    } else {
+      res.status(500).json({
+        status: 'fail',
+        message: 'Task not found',
+      });
     }
   } catch (err) {
-    res.status(500).json({
+    res.status(400).json({
       status: 'fail',
       message: 'Task not found',
     });
