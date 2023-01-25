@@ -1,0 +1,70 @@
+.dashboardSection {
+  padding-top: 1rem;
+  display: grid;
+  grid-template-columns: 90%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.dashboardSection h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #393838;
+  padding: 0;
+  margin: 1rem;
+}
+
+.dashboardSection .gridCards {
+  padding-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5rem;
+}
+
+.gridCards .card {
+  max-width: 350px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(232, 230, 230);
+  border-radius: 0;
+  box-shadow: 0 0 0.5rem rgba(152, 152, 152, 0.6);
+  padding: 1rem;
+  margin: 0 auto;
+  cursor: pointer;
+  gap: 2rem;
+  line-height: 1.3rem;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: 0.2s ease-in;
+}
+
+.card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #3c3c3c;
+  padding: 0;
+  margin: 0;
+  text-transform: capitalize;
+  /* text-decoration: underline; */
+}
+
+.card p {
+  width: 100%;
+  font-size: 0.7rem;
+  font-weight: 100;
+  color: #2c2b2b;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  top: -1rem;
+  opacity: 0.8;
+  font-style: italic;
+  text-transform: capitalize;
+}
