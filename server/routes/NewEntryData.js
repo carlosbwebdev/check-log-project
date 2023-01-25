@@ -7,6 +7,10 @@ const router = express.Router();
 router
   .route('/')
   .post(NewEntryDataController.createNewEntryData)
-  .get(NewEntryDataController.getNewEntryData);
+  .get(NewEntryDataController.getEntryData);
+
+router
+  .route('/:date/:team')
+  .get(NewEntryDataController.getEntryDatabyDateAndTeam);
 
 module.exports = router;
