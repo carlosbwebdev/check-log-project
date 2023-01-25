@@ -4,11 +4,11 @@ const NewEntryData = new mongoose.Schema(
   {
     date: {
       type: Date,
-      required: [true, 'Please provide a title'],
-      default: Date.now,
+      required: true,
     },
     team: {
       type: String,
+      required: true,
     },
     todos: [
       {
