@@ -1,4 +1,5 @@
 const NewEntryData = require('../schemas/newEntryData');
+const User = require('../schemas/userSchema');
 
 exports.createNewEntryData = async (req, res) => {
   try {
@@ -7,11 +8,19 @@ exports.createNewEntryData = async (req, res) => {
       team: req.body.team,
       todos: req.body.todos,
     });
-    res.json({
-      status: 'success',
-      message: 'New entry data added successfully',
-      newEntryData,
-    });
+    const updatedUser = await User.findOneAndUpdate(
+      {
+        _id: req.body.id,
+      },
+      {
+        $push: { tasks: newEntryData._id },
+      },
+      res.json({
+        status: 'success',
+        message: 'New entry data added successfully',
+        newEntryData,
+      })
+    );
   } catch (err) {
     return res.status(500).send(err);
   }
