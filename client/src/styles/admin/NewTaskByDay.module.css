@@ -1,0 +1,122 @@
+.newtaskSection {
+  max-width: 1400px;
+  padding: 5rem 2rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.newtaskSection form {
+  display: grid;
+  grid-template-columns: minmax(200px, 500px);
+  justify-content: center;
+  align-items: center;
+}
+
+.newtaskSection form h1 {
+  text-align: left;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  color: rgb(57, 56, 56);
+}
+
+.newtaskSection form input {
+  background-color: white !important;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  font-size: 0.85rem;
+  color: black;
+  font-weight: 100;
+  max-width: 250px;
+}
+
+.newtaskSection form select {
+  background-color: white !important;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  font-size: 0.85rem;
+  max-width: fit-content;
+}
+
+.newtaskSection form textarea {
+  width: 100%;
+  height: 100px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  font-size: 0.85rem;
+  color: rgb(57, 56, 56);
+}
+
+.btnSection {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 2rem;
+}
+
+.newtaskSection form button {
+  background-color: #267c3f;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  box-shadow: 0px 1px 0px 1px #ccc;
+}
+
+.tableSection {
+  width: 100%;
+}
+
+.tableSection h2 {
+  text-align: end;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  color: rgb(57, 56, 56);
+}
+
+.tableSection table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  text-align: center;
+  color: rgb(57, 56, 56);
+}
+
+.tableSection table th {
+  background-color: #e1e0e0;
+  padding: 0.1rem;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+.tableSection table td {
+  /* border: 1px solid #ccc; */
+  padding: 1rem;
+  text-align: justify;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  font-size: 0.85rem;
+  text-transform: capitalize;
+  width: fit-content;
+}
+
+.tableSection button {
+  background-color: #267c3f;
+  border: none;
+  padding: 0.1rem 0.5rem;
+  cursor: pointer;
+  color: #ccc;
+  box-shadow: 0px 1px 0px 1px #ccc;
+}
