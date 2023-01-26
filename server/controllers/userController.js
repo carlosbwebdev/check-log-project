@@ -69,3 +69,21 @@ exports.getAllUsers = async (req, res) => {
     res.status(500).send({ message: 'No users found' });
   }
 };
+
+exports.updateUser = async (req, res) => {
+  const user = await User.findById(req.params.id);
+
+  if (user && user.id.length === 24) {
+    user.username = req.body.username;
+    user.password = req.body.password;
+    user.email = req.body.email;
+    user.admin = req.body.admin;
+    user.team = req.body.team;
+
+    const updatedUser = await user.save();
+
+    res.send(updatedUser);
+  } else {
+    res.status(500).send({ message: 'Invalid id' });
+  }
+};
