@@ -19,19 +19,16 @@ const User = new mongoose.Schema(
     admin: {
       type: Boolean,
     },
+
     tasks: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Task',
+        ref: 'NewEntryData',
       },
     ],
   },
   { collection: 'user-data' }
 );
-
-// User.statics.findByName = function (name, callback) {
-//   return this.find({ username: new RegExp(name, 'i') }, callback);
-// };
 
 const modal = mongoose.model('UserData', User);
 
